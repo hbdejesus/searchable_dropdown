@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import '../../dropdown_search.dart';
 
 class MenuProps {
-  final ShapeBorder? shape;
-  final double? elevation;
-  final Color? barrierColor;
-  final Color? backgroundColor;
+  final ShapeBorder shape;
+  final double elevation;
+  final Color barrierColor;
+  final Color backgroundColor;
   final bool barrierDismissible;
   final Clip clipBehavior;
-  final AnimationController? animation;
-  final BorderRadiusGeometry? borderRadius;
+  final AnimationController animation;
+  final BorderRadiusGeometry borderRadius;
   final Duration animationDuration;
-  final Color? shadowColor;
+  final Color shadowColor;
   final bool borderOnForeground;
-  final Curve? barrierCurve;
-  final String? barrierLabel;
-  final PositionCallback? positionCallback;
+  final Curve barrierCurve;
+  final String barrierLabel;
+  final PositionCallback positionCallback;
 
   const MenuProps({
     this.barrierLabel,

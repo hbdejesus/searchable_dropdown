@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class BottomSheetProps {
-  final ShapeBorder? shape;
-  final BoxConstraints? constraints;
-  final Color? backgroundColor;
+  final ShapeBorder shape;
+  final BoxConstraints constraints;
+  final Color backgroundColor;
   final Clip clipBehavior;
-  final AnimationController? animation;
+  final AnimationController animation;
   final bool enableDrag;
-  final double? elevation;
+  final double elevation;
 
   const BottomSheetProps({
     this.elevation,

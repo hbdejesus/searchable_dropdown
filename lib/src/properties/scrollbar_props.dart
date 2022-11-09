@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 ///check [RawScrollbar] props description
 class ScrollbarProps {
-  final bool? thumbVisibility;
-  final bool? trackVisibility;
-  final double? thickness;
-  final Radius? radius;
-  final bool? interactive;
+  final bool thumbVisibility;
+  final bool trackVisibility;
+  final double thickness;
+  final Radius radius;
+  final bool interactive;
   final ScrollNotificationPredicate notificationPredicate;
-  final ScrollbarOrientation? scrollbarOrientation;
-  final OutlinedBorder? shape;
-  final Color? thumbColor;
+  final ScrollbarOrientation scrollbarOrientation;
+  final OutlinedBorder shape;
+  final Color thumbColor;
   final double minThumbLength;
-  final double? minOverscrollLength;
-  final Radius? trackRadius;
-  final Color? trackColor;
-  final Color? trackBorderColor;
+  final double minOverscrollLength;
+  final Radius trackRadius;
+  final Color trackColor;
+  final Color trackBorderColor;
   final Duration fadeDuration;
   final Duration timeToFade;
   final Duration pressDuration;

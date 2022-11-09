@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ModalBottomSheetProps {
-  final ShapeBorder? shape;
+  final ShapeBorder shape;
   final bool useRootNavigator;
-  final BoxConstraints? constraints;
-  final double? elevation;
-  final Color? barrierColor;
-  final Color? backgroundColor;
+  final BoxConstraints constraints;
+  final double elevation;
+  final Color barrierColor;
+  final Color backgroundColor;
   final bool barrierDismissible;
   final Clip clipBehavior;
-  final AnimationController? animation;
+  final AnimationController animation;
   final bool enableDrag;
-  final Offset? anchorPoint;
+  final Offset anchorPoint;
   final bool isScrollControlled;
 
   const ModalBottomSheetProps({

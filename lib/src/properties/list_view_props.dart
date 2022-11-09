@@ -4,20 +4,20 @@ import 'package:flutter/material.dart';
 class ListViewProps {
   final Axis scrollDirection;
   final bool reverse;
-  final ScrollController? controller;
-  final bool? primary;
-  final ScrollPhysics? physics;
+  final ScrollController controller;
+  final bool primary;
+  final ScrollPhysics physics;
   final bool shrinkWrap;
-  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry padding;
   final bool addAutomaticKeepAlives;
   final bool addRepaintBoundaries;
   final bool addSemanticIndexes;
-  final double? cacheExtent;
-  final int? semanticChildCount;
+  final double cacheExtent;
+  final int semanticChildCount;
   final DragStartBehavior dragStartBehavior;
   final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior;
-  final String? restorationId;
-  final double? itemExtent;
+  final String restorationId;
+  final double itemExtent;
   final Clip clipBehavior;
 
   const ListViewProps({

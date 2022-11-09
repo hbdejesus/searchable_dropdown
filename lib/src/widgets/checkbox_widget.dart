@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 typedef Widget WidgetCheckBox(BuildContext context, bool isChecked);
 
 class CheckBoxWidget extends StatefulWidget {
-  final WidgetCheckBox? layout;
-  final WidgetCheckBox? checkBox;
+  final WidgetCheckBox layout;
+  final WidgetCheckBox checkBox;
   final bool isChecked;
   final bool isDisabled;
-  final ValueChanged<bool?>? onChanged;
+  final ValueChanged<bool> onChanged;
   final bool interceptCallBacks;
 
   CheckBoxWidget({
-    Key? key,
+    Key key,
     this.isChecked = false,
     this.isDisabled = false,
     this.layout,
     this.checkBox,
     this.interceptCallBacks = false,
-    required this.onChanged,
+    @required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -36,8 +36,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
   @override
   void didUpdateWidget(covariant CheckBoxWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (widget.isChecked != oldWidget.isChecked)
-      isCheckedNotifier.value = widget.isChecked;
+    if (widget.isChecked != oldWidget.isChecked) isCheckedNotifier.value = widget.isChecked;
   }
 
   @override
@@ -48,13 +47,10 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
         var w = Row(
           mainAxisSize: MainAxisSize.max,
           children: [
-            widget.layout != null
-                ? Expanded(child: widget.layout!(context, v == true))
-                : Container(),
+            widget.layout != null ? Expanded(child: widget.layout(context, v == true)) : Container(),
             widget.checkBox != null
-                ? widget.checkBox!(context, v == true)
-                : Checkbox(
-                    value: v, onChanged: widget.isDisabled ? null : (b) {}),
+                ? widget.checkBox(context, v == true)
+                : Checkbox(value: v, onChanged: widget.isDisabled ? null : (b) {}),
           ],
         );
 
@@ -66,7 +62,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                 ? null
                 : () {
                     isCheckedNotifier.value = !v;
-                    if (widget.onChanged != null) widget.onChanged!(v);
+                    if (widget.onChanged != null) widget.onChanged(v);
                   },
             child: IgnorePointer(child: w),
           );

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../properties/menu_props.dart';
 
-Future<T?> showCustomMenu<T>({
-  required BuildContext context,
-  required MenuProps menuModeProps,
-  required RelativeRect position,
-  required Widget child,
+Future<T> showCustomMenu<T>({
+  @required BuildContext context,
+  @required MenuProps menuModeProps,
+  @required RelativeRect position,
+  @required Widget child,
 }) {
   final NavigatorState navigator = Navigator.of(context);
   return navigator.push(
@@ -86,11 +86,11 @@ class _PopupMenuRoute<T> extends PopupRoute<T> {
   final CapturedThemes capturedThemes;
 
   _PopupMenuRoute({
-    required this.context,
-    required this.menuModeProps,
-    required this.position,
-    required this.capturedThemes,
-    required this.child,
+    @required this.context,
+    @required this.menuModeProps,
+    @required this.position,
+    @required this.capturedThemes,
+    @required this.child,
   });
 
   @override
@@ -100,21 +100,19 @@ class _PopupMenuRoute<T> extends PopupRoute<T> {
   bool get barrierDismissible => menuModeProps.barrierDismissible;
 
   @override
-  Color? get barrierColor => menuModeProps.barrierColor;
+  Color get barrierColor => menuModeProps.barrierColor;
 
   @override
-  String? get barrierLabel => menuModeProps.barrierLabel;
+  String get barrierLabel => menuModeProps.barrierLabel;
 
   @override
-  Animation<double>? get animation =>
-      menuModeProps.animation ?? super.animation;
+  Animation<double> get animation => menuModeProps.animation ?? super.animation;
 
   @override
   Curve get barrierCurve => menuModeProps.barrierCurve ?? super.barrierCurve;
 
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation) {
+  Widget buildPage(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
     final PopupMenuThemeData popupMenuTheme = PopupMenuTheme.of(context);
     final menu = Material(
       shape: menuModeProps.shape ?? popupMenuTheme.shape,

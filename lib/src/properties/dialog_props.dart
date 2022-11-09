@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 
 class DialogProps {
-  final List<Widget>? actions;
-  final MainAxisAlignment? actionsAlignment;
-  final OverflowBarAlignment? actionsOverflowAlignment;
-  final double? actionsOverflowButtonSpacing;
-  final VerticalDirection? actionsOverflowDirection;
+  final List<Widget> actions;
+  final MainAxisAlignment actionsAlignment;
+  final OverflowBarAlignment actionsOverflowAlignment;
+  final double actionsOverflowButtonSpacing;
+  final VerticalDirection actionsOverflowDirection;
   final EdgeInsetsGeometry actionsPadding;
   final EdgeInsets insetPadding;
-  final EdgeInsetsGeometry? buttonPadding;
+  final EdgeInsetsGeometry buttonPadding;
   final EdgeInsetsGeometry contentPadding;
-  final Offset? anchorPoint;
-  final RouteTransitionsBuilder? transitionBuilder;
-  final ShapeBorder? shape;
+  final Offset anchorPoint;
+  final RouteTransitionsBuilder transitionBuilder;
+  final ShapeBorder shape;
   final bool useRootNavigator;
-  final double? elevation;
-  final String? semanticLabel;
-  final Color? barrierColor;
+  final double elevation;
+  final String semanticLabel;
+  final Color barrierColor;
   final String barrierLabel;
-  final Color? backgroundColor;
+  final Color backgroundColor;
   final bool barrierDismissible;
   final Duration transitionDuration;
   final Clip clipBehavior;
-  final AnimationController? animation;
-  final AlignmentGeometry? alignment;
+  final AnimationController animation;
+  final AlignmentGeometry alignment;
 
   const DialogProps({
     this.alignment,

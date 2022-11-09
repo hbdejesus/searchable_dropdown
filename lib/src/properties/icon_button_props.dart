@@ -3,27 +3,27 @@ import 'package:flutter/material.dart';
 ///see [IconButton] props for more details
 class IconButtonProps {
   final double iconSize;
-  final VisualDensity? visualDensity;
+  final VisualDensity visualDensity;
   final EdgeInsetsGeometry padding;
   final AlignmentGeometry alignment;
-  final double? splashRadius;
+  final double splashRadius;
   final Widget icon;
-  final Color? focusColor;
-  final Color? hoverColor;
-  final Color? color;
-  final Color? splashColor;
-  final Color? highlightColor;
-  final Color? disabledColor;
+  final Color focusColor;
+  final Color hoverColor;
+  final Color color;
+  final Color splashColor;
+  final Color highlightColor;
+  final Color disabledColor;
   final MouseCursor mouseCursor;
-  final FocusNode? focusNode;
+  final FocusNode focusNode;
   final bool autofocus;
-  final String? tooltip;
+  final String tooltip;
   final bool enableFeedback;
-  final BoxConstraints? constraints;
+  final BoxConstraints constraints;
   final bool isVisible;
 
   const IconButtonProps({
-    required this.icon,
+    @required this.icon,
     this.isVisible = false,
     this.iconSize = 24.0,
     this.visualDensity,

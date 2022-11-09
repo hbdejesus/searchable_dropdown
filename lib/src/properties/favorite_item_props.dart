@@ -7,10 +7,10 @@ class FavoriteItemProps<T> {
   final bool showFavoriteItems;
 
   ///to customize favorites chips
-  final FavoriteItemsBuilder<T>? favoriteItemBuilder;
+  final FavoriteItemsBuilder<T> favoriteItemBuilder;
 
   ///favorites items list
-  final FavoriteItems<T>? favoriteItems;
+  final FavoriteItems<T> favoriteItems;
 
   ///favorite items alignment
   final MainAxisAlignment favoriteItemsAlignment;
